@@ -1,76 +1,96 @@
-\# Changelog
+# Changelog
 
+All notable changes to OpenSec Atlas are documented here.
 
+The project is currently in its early foundation stage. Changes are grouped by release or development milestone rather than by every individual commit.
 
-All notable changes to OpenSec Atlas will be documented here.
+## [Unreleased]
 
+### Documentation
 
+* Refresh project documentation to better define the purpose, scope, and contribution model of OpenSec Atlas.
+* Clarify expectations for security research, evidence, reproducibility, and technical review.
+* Improve contributor guidance for adding and maintaining Atlas knowledge.
 
-The project is currently in its initial foundation phase.
+### Community
 
+* Refine contribution workflows for security researchers, engineers, students, and reviewers.
+* Establish clearer standards for technical evidence and responsible security research.
 
+---
 
-\## \[Unreleased]
+## [0.1.0] — Foundation
 
+### Added
 
+#### Project foundation
 
-\### Added
+* Initial OpenSec Atlas repository structure.
+* Project governance and roadmap documentation.
+* Community Code of Conduct.
+* Security reporting guidance.
+* Contribution and pull request guidelines.
+* Apache-2.0 license for code, tooling, schemas, and automation.
+* CC BY 4.0 licensing for Atlas documentation and knowledge content.
 
+#### Atlas schemas
 
+Initial machine-readable schemas for:
 
-\- Initial public repository
+* Technologies
+* Threats
+* Attacks
+* Defenses
+* Detections
+* Benchmarks
+* Research
+* Labs
 
-\- OpenSec Atlas project identity
+#### Initial technology catalog
 
-\- Initial README
+Added initial Atlas entries covering:
 
-\- Contribution guidelines
+* AI Agents
+* Model Context Protocol (MCP)
+* AI Coding Agents
+* Browser Agents
 
-\- Governance framework
+#### Initial threat catalog
 
-\- Security policy
+Added initial entries covering:
 
-\- Code of conduct
+* Prompt Injection
+* Excessive Agent Permissions
+* Agent Tool Abuse
+* Untrusted Context
 
-\- Project roadmap
+#### Repository automation
 
+* Added Atlas schema validation tooling.
+* Added GitHub Actions validation workflow.
+* Added issue templates for technology, research, security research, feature, and bug contributions.
+* Added pull request template with evidence, validation, reproducibility, and security checks.
 
+### Validation
 
-\### Planned
+The repository includes automated validation for machine-readable Atlas content using JSON Schema.
 
+Local validation:
 
+```bash
+python -m pip install jsonschema
+python tools/validate_atlas.py
+```
 
-\- Machine-readable Atlas schemas
+## Versioning
 
-\- Initial technology catalog
+OpenSec Atlas is currently pre-1.0.
 
-\- Initial threat catalog
+Version numbers will evolve as the project moves from foundation work toward a stable contribution and knowledge model.
 
-\- Attack and defense entries
+Until then, the changelog records meaningful project milestones rather than treating every commit as a release.
 
-\- Detection entries
+---
 
-\- Research reproductions
-
-\- Reproducible security labs
-
-\- Security benchmarks
-
-\- GitHub issue templates
-
-\- Automated validation
-
-\- Community research missions
-
-
-
-\## Versioning
-
-
-
-OpenSec Atlas will use releases to mark significant milestones as the project matures.
-
-
-
-Changes should be documented clearly enough for contributors and users to understand what was added, changed, fixed, or removed.
-
+[Unreleased]: https://github.com/anirudhnshandilya/opensec-atlas/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/anirudhnshandilya/opensec-atlas/releases/tag/v0.1.0
