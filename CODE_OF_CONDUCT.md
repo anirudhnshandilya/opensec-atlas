@@ -1,144 +1,201 @@
-\# Code of Conduct
+# OpenSec Atlas Community Code of Conduct
 
+## Our Commitment
 
+OpenSec Atlas is a community-built security knowledge project.
 
-\## Our Commitment
+We want the project to be a place where security researchers, engineers, students, practitioners, maintainers, and curious contributors can collaborate openly and rigorously.
 
+We are committed to creating an environment where people can:
 
+* investigate difficult security problems
+* challenge technical assumptions
+* share research and evidence
+* disagree constructively
+* learn from one another
+* contribute regardless of experience level
 
-OpenSec Atlas is committed to providing a respectful, inclusive, and technically constructive community.
+Technical rigor and respectful collaboration should reinforce each other.
 
+---
 
-
-We want contributors to be able to participate regardless of their experience level, background, or role.
-
-
-
-\## Expected Behavior
-
-
+## Expected Behavior
 
 Participants are expected to:
 
+### Be respectful
 
+Treat other contributors with professionalism and respect.
 
-\- Treat others with respect.
+Technical disagreement is welcome. Personal attacks are not.
 
-\- Assume good faith.
+### Be constructive
 
-\- Discuss disagreements constructively.
+When identifying a problem, explain it clearly and, where possible, suggest a path toward improvement.
 
-\- Give and receive technical criticism professionally.
+### Be evidence-driven
 
-\- Credit prior work.
+Distinguish between:
 
-\- Respect responsible disclosure practices.
+* established facts
+* experimental observations
+* hypotheses
+* opinions
+* unresolved questions
 
-\- Help new contributors participate.
+Cite sources and provide evidence when appropriate.
 
-\- Focus discussions on ideas, evidence, and technical work.
+### Be open to correction
 
+Security research evolves quickly.
 
+Contributors should be willing to revise claims, documentation, experiments, or conclusions when new evidence becomes available.
 
-\## Unacceptable Behavior
+### Respect responsible security research
 
+Security testing must be performed only against systems and environments where the researcher has appropriate authorization.
 
+### Protect sensitive information
+
+Do not publish credentials, private information, undisclosed vulnerabilities, or other sensitive material without appropriate authorization.
+
+### Credit others
+
+Respect authorship, attribution, licenses, research contributions, and intellectual property.
+
+---
+
+## Technical Disagreement
+
+OpenSec Atlas welcomes strong technical debate.
+
+A contributor may challenge:
+
+* an implementation
+* a methodology
+* an experiment
+* a security claim
+* a benchmark
+* a threat model
+* a defensive recommendation
+
+Criticism should focus on the work rather than the person.
+
+Good:
+
+> "The experiment does not appear to control for X, which may affect the conclusion."
+
+Not good:
+
+> "You clearly don't understand security."
+
+Evidence should be preferred over authority.
+
+---
+
+## Unacceptable Behavior
 
 The following behavior is not acceptable:
 
+* harassment or personal attacks
+* discrimination or hateful conduct
+* threats or intimidation
+* deliberate disruption of community discussions
+* publishing private information without permission
+* impersonation
+* plagiarism or misrepresentation of work
+* knowingly presenting fabricated evidence
+* submitting malicious code or intentionally harmful content
+* unauthorized security testing
+* attempting to compromise project infrastructure
+* deliberately introducing secrets or credentials
+* manipulating research results or benchmark measurements
 
+---
 
-\- Harassment
+## Security Research
 
-\- Discrimination
+OpenSec Atlas is a security research project.
 
-\- Threats
+Contributors may document vulnerabilities, attacks, proof-of-concepts, defensive techniques, and experiments.
 
-\- Personal attacks
+However:
 
-\- Deliberate disruption
+**Authorization comes first.**
 
-\- Doxxing or disclosure of private information
+Do not use OpenSec Atlas as justification for accessing systems, accounts, networks, applications, or data without permission.
 
-\- Malicious security activity
+Potentially dangerous research should be conducted in controlled environments whenever possible.
 
-\- Plagiarism
+See [SECURITY.md](SECURITY.md) for the project's security research and vulnerability-reporting guidance.
 
-\- Misrepresentation of another person's work
+---
 
-\- Deliberate manipulation of research or benchmark results
+## Research Integrity
 
+Research contributions should represent the underlying evidence accurately.
 
+Contributors should not:
 
-\## Technical Disagreement
+* fabricate results
+* manipulate measurements
+* hide material limitations
+* misrepresent reproduced results as original discoveries
+* remove inconvenient results solely to support a conclusion
+* claim validation that was not performed
 
+Negative, inconclusive, or failed experiments can still be valuable contributions when documented honestly.
 
+---
 
-Technical disagreement is expected.
+## Enforcement
 
+Maintainers may take appropriate action when behavior violates this Code of Conduct.
 
+Possible actions include:
 
-Criticism should focus on:
+1. clarification or private discussion
+2. request to modify or remove problematic content
+3. temporary restriction from project spaces
+4. removal of contributions that violate project rules
+5. suspension or removal of participation privileges
 
+Actions will consider the circumstances, severity, intent, and impact of the behavior.
 
+---
 
-\- Evidence
+## Reporting
 
-\- Methodology
+If you experience or observe behavior that violates this Code of Conduct, contact the project maintainers through the project's designated communication channels.
 
-\- Implementation
+For security vulnerabilities or sensitive security reports, follow the process described in [SECURITY.md](SECURITY.md) rather than posting sensitive details publicly.
 
-\- Reproducibility
+Please provide enough context for maintainers to understand the issue while avoiding unnecessary disclosure of private or sensitive information.
 
-\- Security impact
+---
 
-\- Technical reasoning
+## Scope
 
+This Code of Conduct applies to participation in OpenSec Atlas project spaces, including:
 
+* GitHub issues
+* pull requests
+* discussions
+* research reviews
+* project meetings
+* community events
+* project communication channels
 
-Disagreement should not become personal.
+It also applies when someone is representing the project in other public spaces.
 
+---
 
+## Attribution
 
-\## Enforcement
+This document is inspired by common open-source community standards and has been adapted for the research and security focus of OpenSec Atlas.
 
+---
 
+**OpenSec Atlas**
 
-Maintainers may take appropriate action when this code of conduct is violated, including:
-
-
-
-\- Removing inappropriate content
-
-\- Issuing warnings
-
-\- Temporarily restricting participation
-
-\- Removing contributors from project spaces
-
-\- Escalating serious incidents where necessary
-
-
-
-\## Reporting
-
-
-
-If you experience or observe unacceptable behavior, report it privately to the project maintainers through the appropriate GitHub reporting mechanism.
-
-
-
-Do not create a public issue containing sensitive personal information.
-
-
-
-\## Scope
-
-
-
-This code of conduct applies to project repositories, discussions, issues, pull requests, community spaces, and project-related interactions.
-
-
-
-The goal is a community where people can collaborate openly while maintaining high technical and professional standards.
-
+*Discover. Reproduce. Test. Defend. Contribute.*
