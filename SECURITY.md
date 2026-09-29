@@ -1,144 +1,421 @@
-\# Security Policy
+# OpenSec Atlas Roadmap
+
+OpenSec Atlas is building an open security knowledge layer for technologies whose security practices are still being discovered.
+
+The roadmap is intentionally directional. Priorities may change as technologies, research, and the contributor community evolve.
+
+The project is currently in the **foundation stage**.
 
+---
+
+## 1. Foundation
+
+**Status: In progress**
+
+Build the repository and data model needed for the Atlas to grow without becoming an unstructured collection of links.
+
+### Repository
+
+* [x] Establish repository structure
+* [x] Define licensing model
+* [x] Add contribution guidelines
+* [x] Add governance documentation
+* [x] Add security reporting guidance
+* [x] Add Code of Conduct
+* [x] Add pull request and issue templates
+* [x] Add automated repository validation
+* [ ] Add contributor ownership documentation
+* [ ] Add project citation metadata
 
+### Atlas model
 
-\## Scope
+* [x] Define technology schema
+* [x] Define threat schema
+* [x] Define attack schema
+* [x] Define defense schema
+* [x] Define detection schema
+* [x] Define benchmark schema
+* [x] Define research schema
+* [x] Define lab schema
+* [ ] Define relationships between Atlas objects more formally
+* [ ] Define object lifecycle and status rules
+* [ ] Define evidence and confidence metadata
+* [ ] Define versioning strategy for Atlas objects
 
+### Initial knowledge
 
+* [x] AI Agents
+* [x] Model Context Protocol
+* [x] AI Coding Agents
+* [x] Browser Agents
+* [x] Prompt Injection
+* [x] Excessive Agent Permissions
+* [x] Agent Tool Abuse
+* [x] Untrusted Context
+* [ ] Add initial attacks
+* [ ] Add initial defenses
+* [ ] Add initial detections
+* [ ] Add initial research records
+* [ ] Add initial reproducible labs
+* [ ] Add initial benchmarks
 
-This policy covers security vulnerabilities affecting OpenSec Atlas itself, including:
+---
 
+## 2. Build the Initial Atlas
 
+**Status: Next**
 
-\- Repository infrastructure
+Turn the initial taxonomy into a useful body of connected security knowledge.
 
-\- GitHub Actions
+### Expand the agent-security area
 
-\- Maintained software
+Priorities include:
 
-\- Automation
+* prompt injection;
+* indirect prompt injection;
+* tool abuse;
+* excessive agency;
+* credential exposure;
+* sensitive-data exfiltration;
+* malicious tool behavior;
+* insecure tool authorization;
+* agent-to-agent trust;
+* memory and context manipulation;
+* untrusted retrieved content;
+* supply-chain risks;
+* unsafe autonomous actions.
 
-\- Project tooling
+Each major area should connect relevant:
 
-\- Build and validation systems
+**Technology → Threat → Attack → Defense → Detection → Research → Lab**
 
+### Expand technology coverage
 
+Initial areas to investigate:
 
-\## Reporting a Vulnerability
+* RAG systems
+* AI assistants
+* browser automation agents
+* software engineering agents
+* agent protocols
+* tool-use frameworks
+* model gateways
+* local AI runtimes
 
+Later areas may include:
 
+* Edge AI
+* WebAssembly
+* eBPF
+* Confidential Computing
+* Post-Quantum Cryptography
+* Robotics
+* Autonomous Systems
 
-Please do not disclose sensitive vulnerabilities through a public GitHub issue.
+New technologies should be added when there is enough security substance to justify an Atlas entry.
 
+---
 
+## 3. Reproducible Security Research
 
-Use GitHub's private vulnerability reporting mechanism when available.
+**Status: Planned**
 
+Move beyond documenting security knowledge toward making security claims easier to test.
 
+### Research records
 
-When reporting a vulnerability, provide enough information for maintainers to understand and reproduce the issue safely.
+Build a consistent format for recording:
 
+* research question;
+* hypothesis;
+* methodology;
+* environment;
+* dependencies;
+* configuration;
+* datasets;
+* commands;
+* measurements;
+* results;
+* limitations;
+* reproduction status.
 
+### Reproduction infrastructure
 
-\## Security Research
+Develop reusable mechanisms for:
 
+* environment capture;
+* dependency pinning;
+* experiment configuration;
+* result recording;
+* artifact storage;
+* reproduction instructions;
+* independent verification.
 
+The objective is not merely to collect papers.
 
-OpenSec Atlas supports responsible security research.
+It is to make meaningful security claims **testable**.
 
+---
 
+## 4. Security Labs
 
-Security testing must only be performed against systems and environments where the researcher has explicit authorization.
+**Status: Planned**
 
+Create controlled environments where contributors can reproduce security behavior safely.
 
+Labs should provide:
 
-Use controlled, isolated environments for demonstrations whenever possible.
+* isolated environments;
+* explicit prerequisites;
+* setup instructions;
+* reproducible procedures;
+* expected results;
+* cleanup instructions;
+* safety boundaries;
+* references to the relevant Atlas objects.
 
+Possible early labs:
 
+* prompt-injection demonstrations;
+* agent tool authorization failures;
+* malicious tool scenarios;
+* browser-agent manipulation;
+* insecure coding-agent workflows;
+* data-exfiltration scenarios.
 
-Do not use OpenSec Atlas as authorization to test third-party systems.
+Labs should prioritize educational and defensive value and remain within authorized testing environments.
 
+---
 
+## 5. Detection Engineering
 
-\## Research Contributions
+**Status: Planned**
 
+Build a detection layer connected directly to documented threats and attacks.
 
+Explore support for:
 
-Research involving vulnerabilities should consider:
+* behavioral detections;
+* telemetry requirements;
+* log sources;
+* detection logic;
+* SIEM rules;
+* endpoint signals;
+* application telemetry;
+* agent audit logs;
+* tool invocation monitoring;
+* false-positive analysis.
 
+The long-term objective is to answer:
 
+> **If this attack happens, what evidence should a defender expect to see?**
 
-\- Authorization
+---
 
-\- Responsible disclosure
+## 6. Security Benchmarks
 
-\- Affected parties
+**Status: Planned**
 
-\- Sensitive information
+Create reproducible ways to measure security properties rather than relying exclusively on qualitative claims.
 
-\- Reproduction safety
+Potential benchmark areas:
 
-\- Legal and ethical requirements
+* prompt-injection resistance;
+* tool authorization;
+* agent permission boundaries;
+* data-exfiltration resistance;
+* sandbox escape resistance;
+* detection coverage;
+* security-control effectiveness;
+* reproducibility of published attacks.
 
+Benchmarks should document their:
 
+* objective;
+* environment;
+* metrics;
+* methodology;
+* limitations;
+* reproduction procedure.
 
-\## Security Claims
+Benchmark results should remain traceable to the exact methodology and environment used to produce them.
 
+---
 
+## 7. Knowledge Graph
 
-Contributors should distinguish between:
+**Status: Planned**
 
+The Atlas should eventually become more than a directory.
 
+Build explicit relationships between objects:
 
-\- Verified findings
+```text
+Technology
+    ↓
+Threat
+    ↓
+Attack
+    ↓
+Defense
+    ↓
+Detection
+    ↓
+Evidence
+    ↓
+Research / Lab / Benchmark
+```
 
-\- Reproduced research
+Potential capabilities:
 
-\- Experimental observations
+* cross-reference discovery;
+* attack-to-defense mapping;
+* threat-to-detection mapping;
+* research-to-technology mapping;
+* evidence provenance;
+* dependency and relationship visualization;
+* machine-readable Atlas queries.
 
-\- Hypotheses
+The objective is to make relationships between security knowledge discoverable.
 
-\- Assumptions
+---
 
-\- Unresolved questions
+## 8. Contributor Missions
 
+**Status: Planned**
 
+Make it easy for someone to contribute without first understanding the entire repository.
 
-Security claims should include evidence and references where practical.
+Introduce focused missions such as:
 
+* document a technology;
+* map a threat;
+* reproduce an attack;
+* implement a defense;
+* write a detection;
+* reproduce a research result;
+* build a lab;
+* create a benchmark;
+* verify an existing Atlas entry;
+* improve documentation.
 
+Missions should have clear scopes, expected outputs, and acceptance criteria.
 
-\## Third-Party Vulnerabilities
+---
 
+## 9. Community Review
 
+**Status: Planned**
 
-When research identifies a vulnerability in another project or product, follow the affected project's responsible disclosure process.
+As the Atlas grows, establish stronger mechanisms for technical review.
 
+Potential areas:
 
+* domain maintainers;
+* research reviewers;
+* detection reviewers;
+* benchmark reviewers;
+* technology-area ownership;
+* contributor recognition;
+* review history;
+* correction workflows.
 
-Avoid publishing sensitive exploitation details before appropriate disclosure and remediation opportunities have been provided.
+The goal is to scale review without turning contribution into bureaucracy.
 
+---
 
+## 10. Atlas Tooling
 
-\## Maintainer Responsibilities
+**Status: Planned**
 
+Build tooling around the underlying structured knowledge.
 
+Potential tools include:
 
-Maintainers should:
+* Atlas CLI;
+* schema validation;
+* reference validation;
+* relationship validation;
+* duplicate detection;
+* broken-link detection;
+* evidence checks;
+* Atlas search;
+* object generation;
+* contribution linting;
+* benchmark runners;
+* research artifact checks.
 
+Eventually, the Atlas should be useful both to humans and to machines.
 
+---
 
-\- Respond to valid vulnerability reports
+## 11. Atlas Platform
 
-\- Protect sensitive information
+**Status: Long term**
 
-\- Coordinate disclosure where appropriate
+If the underlying repository and knowledge model prove useful, build interfaces on top of them.
 
-\- Keep affected contributors informed where practical
+Potential capabilities:
 
-\- Document relevant security fixes
+* searchable Atlas;
+* interactive knowledge graph;
+* threat explorer;
+* attack explorer;
+* detection explorer;
+* benchmark explorer;
+* research explorer;
+* technology security profiles;
+* API access;
+* machine-readable exports;
+* contributor dashboards.
 
+The platform should remain downstream of the open repository rather than becoming a replacement for it.
 
+---
 
-Security is a shared responsibility across the project.
+# What Success Looks Like
 
+OpenSec Atlas should eventually make it possible to take an unfamiliar technology and answer:
+
+**What is it?**
+
+→ **What can go wrong?**
+
+→ **How can it be attacked?**
+
+→ **Can the behavior be reproduced?**
+
+→ **What evidence exists?**
+
+→ **How can it be detected?**
+
+→ **How can it be defended?**
+
+→ **How reliable is the evidence?**
+
+That is the core loop of the project.
+
+---
+
+# Near-Term Priorities
+
+Before expanding into dozens of technologies, the project will prioritize depth over breadth.
+
+The immediate sequence is:
+
+1. **Strengthen the Atlas data model**
+2. **Build the first connected technology/threat/attack set**
+3. **Add reproducible security labs**
+4. **Add defensive detections**
+5. **Add research reproductions**
+6. **Add the first security benchmarks**
+7. **Make contribution missions easy to discover**
+8. **Improve automated validation and review tooling**
+
+Only then should the project aggressively expand into additional technology domains.
+
+---
+
+# Guiding Principle
+
+> **Don't build a catalogue of security links. Build infrastructure for security knowledge.**
