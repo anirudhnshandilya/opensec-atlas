@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/benchmark.schema.json",
+  "title": "OpenSec Atlas Benchmark",
+  "description": "Schema for a reproducible security benchmark.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^BENCH-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "validated",
+        "deprecated"
+      ]
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 10
+    },
+    "target_technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TECH-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "environment": {
+      "type": "string"
+    },
+    "reproduction": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    }
+  }
+}

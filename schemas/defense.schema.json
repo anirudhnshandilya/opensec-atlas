@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/defense.schema.json",
+  "title": "OpenSec Atlas Defense",
+  "description": "Schema for a security defense, mitigation, control, or hardening technique.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^DEFENSE-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "documented",
+        "validated",
+        "deprecated"
+      ]
+    },
+    "addresses_threats": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^THREAT-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "addresses_attacks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^ATTACK-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "implementation": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/threat.schema.json",
+  "title": "OpenSec Atlas Threat",
+  "description": "Schema for a documented security threat.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "severity",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^THREAT-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "informational",
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "documented",
+        "validated",
+        "deprecated"
+      ]
+    },
+    "affected_technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TECH-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    },
+    "mitigations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^DEFENSE-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    }
+  }
+}

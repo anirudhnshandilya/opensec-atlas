@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/research.schema.json",
+  "title": "OpenSec Atlas Research",
+  "description": "Schema for a security research contribution or research reproduction.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "title",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^RESEARCH-[A-Z0-9-]+$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "in-progress",
+        "reproduced",
+        "validated",
+        "archived"
+      ]
+    },
+    "research_question": {
+      "type": "string"
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TECH-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "threats": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^THREAT-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "methodology": {
+      "type": "string"
+    },
+    "environment": {
+      "type": "string"
+    },
+    "results": {
+      "type": "string"
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    }
+  }
+}

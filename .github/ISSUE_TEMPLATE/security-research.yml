@@ -1,0 +1,43 @@
+name: Security Research
+description: Propose security research, findings, or an investigation
+title: "[Research]: "
+labels:
+  - research
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Research title
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+      description: What security question are you investigating?
+    validations:
+      required: true
+
+  - type: textarea
+    id: methodology
+    attributes:
+      label: Methodology
+      description: Describe the proposed or completed methodology.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Describe experiments, datasets, observations, or other supporting evidence.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+    validations:
+      required: true

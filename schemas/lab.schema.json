@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/lab.schema.json",
+  "title": "OpenSec Atlas Lab",
+  "description": "Schema for a reproducible security research laboratory.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^LAB-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "validated",
+        "archived"
+      ]
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 10
+    },
+    "technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TECH-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "threats": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^THREAT-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "setup": {
+      "type": "string"
+    },
+    "procedure": {
+      "type": "string"
+    },
+    "expected_result": {
+      "type": "string"
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    },
+    "authorized_testing_only": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,49 @@
+name: Research Contribution
+description: Submit a research reproduction, dataset, experiment, or benchmark contribution
+title: "[Research Contribution]: "
+labels:
+  - research
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Contribution type
+      options:
+        - Research reproduction
+        - Dataset
+        - Experiment
+        - Benchmark
+        - Security lab
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the contribution and its purpose.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction details
+      description: Provide environment, dependencies, commands, and expected results.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Provide results and supporting evidence.
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+    validations:
+      required: true

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/attack.schema.json",
+  "title": "OpenSec Atlas Attack",
+  "description": "Schema for a documented security attack or attack technique.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^ATTACK-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "documented",
+        "validated",
+        "deprecated"
+      ]
+    },
+    "affected_technologies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^TECH-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "related_threats": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^THREAT-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "prerequisites": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "impact": {
+      "type": "string",
+      "minLength": 10
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    },
+    "authorized_testing_only": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://opensec-atlas.org/schemas/detection.schema.json",
+  "title": "OpenSec Atlas Detection",
+  "description": "Schema for a security detection, monitoring rule, or detection technique.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "name",
+    "description",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^DETECT-[A-Z0-9-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 20
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "proposed",
+        "documented",
+        "validated",
+        "deprecated"
+      ]
+    },
+    "detects_threats": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^THREAT-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "detects_attacks": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^ATTACK-[A-Z0-9-]+$"
+      },
+      "uniqueItems": true
+    },
+    "data_sources": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "logic": {
+      "type": "string"
+    },
+    "false_positive_considerations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      },
+      "uniqueItems": true
+    }
+  }
+}

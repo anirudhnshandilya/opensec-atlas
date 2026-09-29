@@ -1,0 +1,37 @@
+name: New Technology
+description: Propose a technology for inclusion in the Atlas
+title: "[Technology]: "
+labels:
+  - technology
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Technology name
+      placeholder: "Example: WebAssembly"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the technology and why is it security-relevant?
+    validations:
+      required: true
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security relevance
+      description: What security problems or research opportunities does it introduce?
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Provide documentation, papers, advisories, or other useful sources.
+    validations:
+      required: true
